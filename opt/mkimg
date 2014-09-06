@@ -1,0 +1,8 @@
+#!/bin/bash
+./mkbootimg --kernel ../arch/arm/boot/zImage \
+ --ramdisk boot/boot.img.bk-ramdisk.gz \
+--cmdline "console=ttyHSL0,115200,n8 androidboot.hardware=mako lpj=67677 user_debug=31" \
+--pagesize 2048 \
+--base 0x80200000 \
+--ramdiskaddr 0x81800000 \
+--output kiriyard.img
